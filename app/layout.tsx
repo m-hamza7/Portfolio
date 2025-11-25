@@ -20,6 +20,12 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
+        rel: "icon",
+        url: "/Picture.jpg",
+        type: "image/jpeg",
+        sizes: "20x20",
+      },
+      {
         url: "/icon-light-32x32.png",
         media: "(prefers-color-scheme: light)",
       },
@@ -43,6 +49,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="48x48" />
+      </head>
       <body className={`font-sans antialiased dark`}>{children}</body>
     </html>
   )
