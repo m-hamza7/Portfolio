@@ -63,7 +63,7 @@ export default function Contact({ scrollToSection }: ContactProps) {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Let's <span className="gradient-accent bg-clip-text text-transparent">Connect</span>
+            Let's <span className="gradient-accent bg-clip-text text-transparent"> Connect </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Whether you have a project in mind or just want to say hi, feel free to reach out. I'm always open to

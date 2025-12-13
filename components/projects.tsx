@@ -4,6 +4,13 @@ import { Button } from "@/components/ui/button"
 export default function Projects() {
   const projects = [
     {
+      title: "100+ PPC Landing Pages",
+      description:
+        "Designed and developed high-converting PPC landing pages with focus on fast performance, enhanced UI/UX, clear CTAs, and optimized user flows to maximize ad ROI.",
+      tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Conversion Optimization"],
+      featured: true,
+    },
+    {
       title: "CleanAI - AI-Powered Waste Classification",
       description:
         "An intelligent waste-sorting system using deep learning-based object detection (YOLO). Built a polished landing page and interactive prototype demonstrating the app mechanism.",
@@ -26,12 +33,13 @@ export default function Projects() {
       tech: ["Flask", "Python", "MySQL", "Authentication", "UI/UX"],
       github: "https://github.com/m-hamza7/Online-Blood-Donation-System",
     },
+
     {
-      title: "100+ PPC Landing Pages",
+      title: "miniC-Compiler",
       description:
-        "Designed and developed high-converting PPC landing pages with focus on fast performance, enhanced UI/UX, clear CTAs, and optimized user flows to maximize ad ROI.",
-      tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Conversion Optimization"],
-      featured: true,
+        "A fully functional compiler front-end for the MiniC programming language, built with Python, PLY (Python Lex-Yacc), and Flask. This web application demonstrates all major compiler phases with interactive visualizations. MiniC is a simplified programming language designed to mimic the basic structure and syntax of the C family.",
+      tech: ["Python","PLY","Flask", "UI/UX"],
+      github: "https://github.com/m-hamza7/miniC-compiler",
     },
     {
       title: "Library Management System",

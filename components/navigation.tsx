@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { useRouter } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -12,6 +13,7 @@ interface NavigationProps {
 export default function Navigation({ activeSection, scrollToSection }: NavigationProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const router = useRouter()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +28,7 @@ export default function Navigation({ activeSection, scrollToSection }: Navigatio
     { id: "skills", label: "SKILLS" },
     { id: "projects", label: "PROJECTS" },
     { id: "contact", label: "CONTACT" },
+    { id: "resume", label: "RESUME" },
   ]
 
   return (
@@ -37,14 +40,14 @@ export default function Navigation({ activeSection, scrollToSection }: Navigatio
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="text-2xl font-bold gradient-accent bg-clip-text text-transparent">MH</div>
+          <div className="text-2xl font-bold gradient-accent bg-clip-text text-transparent">Hamza</div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex gap-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => (item.id === "resume" ? router.push("/resume/view") : scrollToSection(item.id))}
                 className={`nav-link text-sm font-medium tracking-wide ${activeSection === item.id ? "active" : ""}`}
               >
                 {item.label}
@@ -80,6 +83,11 @@ export default function Navigation({ activeSection, scrollToSection }: Navigatio
               <button
                 key={item.id}
                 onClick={() => {
+                  if (item.id === "resume") {
+                    router.push("/resume/view")
+                    setMobileMenuOpen(false)
+                    return
+                  }
                   scrollToSection(item.id)
                   setMobileMenuOpen(false)
                 }}
