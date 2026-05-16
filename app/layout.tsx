@@ -8,14 +8,14 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Muhammad Hamza | PPC Developer & Full Stack Engineer",
+  title: "Muhammad Hamza | CS Student | Software Engineering & QA",
   description:
-    "Professional portfolio showcasing 100+ high-converting PPC landing pages, React applications, and AI/ML projects. Specialized in fast performance, UI/UX optimization, and RESTful APIs.",
+    "Portfolio of a Computer Science student interested in software engineering and quality assurance. Projects in web development, React, Python, and testing.",
   generator: "v0.app",
   openGraph: {
-    title: "Muhammad Hamza | PPC Developer & Full Stack Engineer",
+    title: "Muhammad Hamza | CS Student | Software Engineering & QA",
     description:
-      "Professional portfolio showcasing 100+ high-converting PPC landing pages, React applications, and AI/ML projects.",
+      "Portfolio of a Computer Science student interested in software engineering and quality assurance.",
     type: "website",
   },
   icons: {

@@ -4,16 +4,16 @@ import { Button } from "@/components/ui/button"
 export default function Projects() {
   const projects = [
     {
-      title: "100+ PPC Landing Pages",
+      title: "100+ Web Pages & Mini Sites",
       description:
-        "Designed and developed high-converting PPC landing pages with focus on fast performance, enhanced UI/UX, clear CTAs, and optimized user flows to maximize ad ROI.",
+        "Built multiple responsive web pages and mini sites with focus on fast performance, clean UI, and working well across different devices and browsers.",
       tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Conversion Optimization"],
       featured: true,
     },
     {
       title: "CleanAI - AI-Powered Waste Classification",
       description:
-        "An intelligent waste-sorting system using deep learning-based object detection (YOLO). Built a polished landing page and interactive prototype demonstrating the app mechanism.",
+        "A waste-sorting system using object detection (YOLO). Built the frontend with a polished landing page and interactive prototype to demonstrate how the system works.",
       tech: ["Python", "YOLO", "Flask", "React", "Machine Learning"],
       liveLink: "https://cleanai-project.vercel.app/",
       github: "https://github.com/m-hamza7",
@@ -22,14 +22,14 @@ export default function Projects() {
     {
       title: "Atomic Chess - AI-Based Game",
       description:
-        "Interactive web-based chess variant with custom rules, move validation, explosion mechanics, and AI-powered opponent. Built with React and implemented smooth piece animations.",
+        "Interactive web-based chess game with custom rules, move validation, and AI opponent. Built with React focusing on clean code and smooth gameplay.",
       tech: ["React", "JavaScript", "AI Logic", "Game Development"],
       github: "https://github.com/m-hamza7/Atomic-Chess",
     },
     {
       title: "Online Blood Donation System",
       description:
-        "Complete web-based MIS for managing donors, hospitals, appointments, and blood inventories. Implemented role-based access, CRUD operations, and secure authentication.",
+        "A web app for managing blood donation records including donors, hospitals, and appointments. Built with role-based access, user authentication, and focus on reliable data management.",
       tech: ["Flask", "Python", "MySQL", "Authentication", "UI/UX"],
       github: "https://github.com/m-hamza7/Online-Blood-Donation-System",
     },
@@ -37,7 +37,7 @@ export default function Projects() {
     {
       title: "miniC-Compiler",
       description:
-        "A fully functional compiler front-end for the MiniC programming language, built with Python, PLY (Python Lex-Yacc), and Flask. This web application demonstrates all major compiler phases with interactive visualizations. MiniC is a simplified programming language designed to mimic the basic structure and syntax of the C family.",
+        "A compiler front-end for the MiniC language built with Python and Flask. The app demonstrates compiler phases with interactive visualizations and proper error handling.",
       tech: ["Python","PLY","Flask", "UI/UX"],
       github: "https://github.com/m-hamza7/miniC-compiler",
     },
@@ -65,7 +65,7 @@ export default function Projects() {
             Featured <span className="gradient-accent bg-clip-text text-transparent">Projects</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A selection of projects showcasing my expertise in full-stack development, AI/ML, and UI/UX optimization.
+            A selection of projects I've built to learn full-stack development, problem-solving, and writing quality code.
           </p>
         </div>
 

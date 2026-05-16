@@ -16,11 +16,17 @@ export default function Resume() {
             Resumé
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Download my resume to see detailed experience, projects, and skills.
+            View my skills, projects, and interests in software engineering and quality assurance.
           </p>
         </div>
 
-        <div className="flex gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={viewHref} className="no-underline">
+            <Button variant="outline" className="inline-flex items-center gap-2 border-border hover:bg-muted">
+              <Eye size={16} />
+              View Resume
+            </Button>
+          </a>
           <a href={downloadHref} download className="no-underline">
             <Button className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground">
               <Download size={16} />

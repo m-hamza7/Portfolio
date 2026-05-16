@@ -1,11 +1,16 @@
-import { Code2, Database, Brain, Wrench } from "lucide-react"
+import { Code2, Database, ShieldCheck, Wrench } from "lucide-react"
 
 export default function Skills() {
   const skillCategories = [
     {
-      title: "Frontend Development",
+      title: "Software Engineering",
       icon: Code2,
-      skills: ["HTML5/CSS3", "JavaScript (ES6+)", "React.js", "Responsive Design", "UI/UX Optimization"],
+      skills: ["HTML5/CSS3", "JavaScript (ES6+)", "React.js", "Responsive Design", "REST APIs"],
+    },
+    {
+      title: "Quality Assurance",
+      icon: ShieldCheck,
+      skills: ["Manual Testing", "Regression Testing", "Bug Reporting", "Test Case Design", "Cross-Browser Checks"],
     },
     {
       title: "Backend & Databases",
@@ -13,14 +18,9 @@ export default function Skills() {
       skills: ["Python (Flask)", "RESTful APIs", "MySQL/SQL", "CRUD Development", "Authentication"],
     },
     {
-      title: "AI & Machine Learning",
-      icon: Brain,
-      skills: ["Model Training", "YOLO Object Detection", "Dataset Preprocessing", "Model Evaluation", "Deep Learning"],
-    },
-    {
       title: "Tools & Platforms",
       icon: Wrench,
-      skills: ["Git/GitHub", "VS Code", "PyCharm", "MS Dynamics 365", "Vercel"],
+      skills: [ "Playwright","Postman", "Jira","Git/GitHub","MS Dynamics 365", "Power Platform"],
     },
   ]
 
@@ -29,10 +29,10 @@ export default function Skills() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Technical <span className="gradient-accent bg-clip-text text-transparent">Skills</span>
+            My <span className="gradient-accent bg-clip-text text-transparent">Skills</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive toolkit built through hands-on experience and continuous learning.
+            Technologies and practices I've learned through projects and coursework.
           </p>
         </div>
 

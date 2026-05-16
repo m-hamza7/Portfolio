@@ -35,7 +35,7 @@ export default function ResumePage() {
             <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
               <div>
                 <h1 className="text-4xl font-bold">Resume</h1>
-                <p className="text-xl text-muted-foreground">My professional experience and qualifications</p>
+                  <p className="text-xl text-muted-foreground">My skills, interests, and projects</p>
               </div>
 
               <div>
@@ -196,7 +196,7 @@ export default function ResumePage() {
                   </div>
 
                   <div className="mt-6">
-                    <Link href="/contact">
+                    <Link href="/#contact">
                       <Button className="w-full">Get in Touch</Button>
                     </Link>
                   </div>

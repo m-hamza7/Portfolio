@@ -16,7 +16,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
           <div className="inline-block">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20 text-sm font-medium">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-              Available for freelance projects
+              Open to internships & entry-level roles
             </span>
           </div>
 
@@ -33,9 +33,9 @@ export default function Hero({ scrollToSection }: HeroProps) {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed text-balance">
-            Full-stack developer specializing in high-converting PPC landing pages, React applications, and AI/ML
-            projects. I've designed and developed 100+ responsive websites focused on performance optimization and
-            enhanced user experiences.
+            I'm a Computer Science student passionate about building responsive web applications and understanding
+            software quality. I'm learning full-stack development and interested in how teams build and test reliable
+            projects.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -57,16 +57,16 @@ export default function Hero({ scrollToSection }: HeroProps) {
           {/* Quick Stats */}
           <div className="pt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
-              <p className="text-3xl md:text-4xl font-bold text-accent">100+</p>
-              <p className="text-sm text-muted-foreground">PPC Projects</p>
+              <p className="text-3xl md:text-4xl font-bold text-accent">10+</p>
+              <p className="text-sm text-muted-foreground">Projects Built</p>
             </div>
             <div>
-              <p className="text-3xl md:text-4xl font-bold text-accent">5+</p>
-              <p className="text-sm text-muted-foreground">Major Projects</p>
+              <p className="text-3xl md:text-4xl font-bold text-accent">2026</p>
+              <p className="text-sm text-muted-foreground">Expected Graduation</p>
             </div>
             <div>
               <p className="text-3xl md:text-4xl font-bold text-accent">10+</p>
-              <p className="text-sm text-muted-foreground">Tech Skills</p>
+              <p className="text-sm text-muted-foreground">Core Tools</p>
             </div>
             <div>
               <p className="text-3xl md:text-4xl font-bold text-accent">Karachi</p>
