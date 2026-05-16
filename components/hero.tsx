@@ -3,27 +3,24 @@
 import Image from "next/image"
 import { ArrowRight, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { useEffect, useState } from "react"
 
 interface HeroProps {
   scrollToSection: (sectionId: string) => void
 }
 
-const FloatingParticle = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 })
-  useEffect(() => {
-    setPosition({
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-    })
-  }, [])
+const FloatingParticle = ({ index }: { index: number }) => {
+  const left = (index * 17) % 100
+  const top = (index * 29) % 100
+  const duration = 10 + (index % 6) * 1.5
+  const delay = index * 0.2
+
   return (
     <div
       className="absolute w-1 h-1 rounded-full bg-gradient-to-r from-primary to-accent opacity-50"
       style={{
-        left: `${position.x}%`,
-        top: `${position.y}%`,
-        animation: `float ${Math.random() * 10 + 10}s ease-in-out infinite`,
+        left: `${left}%`,
+        top: `${top}%`,
+        animation: `float ${duration}s ease-in-out infinite ${delay}s`,
       }}
     />
   )
@@ -44,7 +41,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
           style={{ animation: "float 8s ease-in-out infinite 2s" }}
         />
         {[...Array(12)].map((_, i) => (
-          <FloatingParticle key={i} />
+          <FloatingParticle key={i} index={i} />
         ))}
       </div>
 
@@ -52,7 +49,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
         <div className="space-y-6">
           {/* Badge */}
           <div className="inline-block slide-in-down">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect text-sm font-medium group hover:scale-105 transition-transform">
+            <span className="inline-flex items-center gap-2 rounded-full glass px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.25em] text-muted-foreground transition-transform group hover:scale-105">
               <span className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-accent pulse-dot"></span>
               Open to internships & entry-level roles
             </span>
@@ -93,7 +90,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
           <div className="flex flex-col sm:flex-row gap-4 pt-6">
             <Button
               onClick={() => scrollToSection("projects")}
-              className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:shadow-primary/50 text-white inline-flex items-center gap-2 px-8 py-6 text-lg group transition-all hover:scale-105"
+              className="rounded-full nav-cta text-white inline-flex items-center gap-2 px-8 py-6 text-lg group transition-all hover:scale-[1.02]"
             >
               View My Work
               <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
@@ -101,7 +98,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
             <Button
               onClick={() => scrollToSection("contact")}
               variant="outline"
-              className="border-primary/30 hover:bg-primary/5 px-8 py-6 text-lg transition-all hover:border-primary/60"
+              className="rounded-full glass px-8 py-6 text-lg transition-all hover:border-primary/40 hover:bg-white/5"
             >
               <Sparkles size={20} className="mr-2" />
               Let's Connect
@@ -118,7 +115,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
             ].map((stat, idx) => (
               <div
                 key={idx}
-                className="text-center card-hover"
+                className="text-center glass rounded-2xl p-5 card-hover"
                 style={{
                   animation: `slideInUp 0.6s ease-out ${stat.delay * 0.1}s both`,
                 }}

@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
 import ScrollToTop from "@/components/scroll-to-top"
+import SiteBackground from "@/components/site-background"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
@@ -54,8 +55,9 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="48x48" />
       </head>
-      <body className={`font-sans antialiased dark`}>
-        {children}
+      <body className={`font-sans antialiased dark relative isolate overflow-x-hidden`}>
+        <SiteBackground />
+        <div className="relative z-10">{children}</div>
         <ScrollToTop />
       </body>
     </html>

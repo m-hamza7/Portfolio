@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -32,93 +32,90 @@ export default function Navigation({ activeSection, scrollToSection }: Navigatio
   ]
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/95 backdrop-blur-sm border-b border-border" : "bg-background/95 backdrop-blur-sm border-b border-border"
-      }`}
-    >
-        {/* Glass-effect gradient border */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-primary/0 via-primary/50 to-accent/0" />
-      
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <div className="text-2xl font-bold gradient-accent bg-clip-text text-transparent">Hamza</div>
+    <>
+      <div className="fixed top-0 left-0 right-0 z-50 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500" style={{ transformOrigin: "0%", transform: scrolled ? "scaleX(1)" : "scaleX(0)" }} />
+      <header className="fixed top-4 left-1/2 z-50 hidden w-[calc(100vw-2rem)] max-w-7xl -translate-x-1/2 md:block lg:top-8">
+        <div className="relative">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 blur-xl" />
+          <nav className={`relative flex items-center justify-between rounded-full border border-white/10 px-6 py-4 transition-all duration-700 ${scrolled ? "glass" : "glass"}`}>
+            <div className="flex items-center gap-3">
+              <div className="text-2xl font-bold gradient-text flex-shrink-0">Hamza</div>
+              <div className="hidden sm:flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-500/10 px-3 py-1.5">
+                <div className="h-2 w-2 rounded-full bg-emerald-400 shadow-lg shadow-emerald-400/50" />
+                <span className="text-[10px] font-medium tracking-[0.2em] text-emerald-300 uppercase">Available</span>
+              </div>
+            </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex gap-8">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => (item.id === "resume" ? router.push("/resume/view") : scrollToSection(item.id))}
-                className={`nav-link relative text-sm font-medium tracking-wide transition-colors hover:text-primary ${
-                  activeSection === item.id ? "text-primary" : "text-muted-foreground"
-                } after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-gradient-to-r after:from-primary after:to-accent after:w-0 after:hover:w-full after:transition-all after:duration-300`}
-              >
-                {item.label}
-              </button>
-            ))}
-          </div>
+            <div className="hidden items-center gap-1 lg:flex">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => (item.id === "resume" ? router.push("/resume/view") : scrollToSection(item.id))}
+                  className={`relative group rounded-full px-4 py-2 text-sm font-medium tracking-wide transition-colors ${
+                    activeSection === item.id ? "text-white" : "text-gray-400"
+                  } hover:text-white`}
+                >
+                  <span className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  <span className="relative z-10">{item.label}</span>
+                </button>
+              ))}
+            </div>
 
-          {/* Desktop CTA */}
-          <div className="hidden md:block">
-                        <div className="relative group">
-                          <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur" />
             <Button
               onClick={() => scrollToSection("contact")}
-                className="relative bg-gradient-to-r from-primary to-accent text-white shadow-lg hover:shadow-xl hover:shadow-primary/50 transition-all font-semibold"
+              className="ml-4 rounded-full px-5 py-2 text-sm font-semibold text-white nav-cta hover:scale-[1.02]"
             >
               Get In Touch
             </Button>
-                      </div>
-          </div>
+          </nav>
+        </div>
+      </header>
 
-          {/* Mobile Menu Toggle */}
-          <div className="md:hidden">
+      <header className="fixed top-4 left-0 right-0 z-50 px-4 md:hidden">
+        <div className="relative mx-auto w-full max-w-[420px]">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 blur-xl" />
+          <nav className="relative flex items-center justify-between rounded-full glass px-5 py-3">
+            <div className="text-xl font-bold gradient-text flex-shrink-0">Hamza</div>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 hover:bg-muted rounded-lg transition-all hover:shadow-lg"
+              className="z-50 rounded-lg p-2 text-white transition-colors hover:bg-white/10"
             >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
-          </div>
-        </div>
+          </nav>
 
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="md:hidden pb-4 space-y-3 border-t border-border pt-4 bg-gradient-to-b from-background to-background/50 rounded-b-lg backdrop-blur-sm">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => {
-                  if (item.id === "resume") {
-                    router.push("/resume/view")
+          {mobileMenuOpen && (
+            <div className="mt-3 space-y-2 rounded-2xl glass p-3">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => {
+                    if (item.id === "resume") {
+                      router.push("/resume/view")
+                      setMobileMenuOpen(false)
+                      return
+                    }
+                    scrollToSection(item.id)
                     setMobileMenuOpen(false)
-                    return
-                  }
-                  scrollToSection(item.id)
-                  setMobileMenuOpen(false)
-                }}
-                className="block w-full text-left px-4 py-3 rounded-lg transition-all hover:bg-primary/10 hover:text-primary text-muted-foreground border border-transparent hover:border-primary/50"
-              >
-                {item.label}
-              </button>
-            ))}
-            <div className="relative group">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur mx-4" />
+                  }}
+                  className="block w-full rounded-xl border border-transparent px-4 py-3 text-left text-sm font-medium tracking-wide text-gray-300 transition-all hover:border-primary/40 hover:bg-primary/10 hover:text-white"
+                >
+                  {item.label}
+                </button>
+              ))}
               <Button
                 onClick={() => {
                   scrollToSection("contact")
                   setMobileMenuOpen(false)
                 }}
-                className="relative w-full bg-gradient-to-r from-primary to-accent text-white shadow-lg hover:shadow-primary/50 transition-all font-semibold"
+                className="w-full rounded-xl nav-cta text-sm font-semibold text-white"
               >
                 Get In Touch
               </Button>
             </div>
-          </div>
-        )}
-      </div>
-    </nav>
+          )}
+        </div>
+      </header>
+    </>
   )
 }

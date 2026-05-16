@@ -269,4 +269,100 @@
   .skill-tag:hover {
     @apply bg-primary/20 border-primary/50 transform scale-105;
   }
+
+  .glass {
+    background: rgba(15, 23, 42, 0.18);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 40px rgba(2, 6, 23, 0.18);
+  }
+
+  .dark .glass {
+    background: rgba(15, 23, 42, 0.42);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+  }
+
+  .gradient-text {
+    background: linear-gradient(90deg, #60a5fa, #a855f7, #22d3ee);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rotateGradient 10s ease infinite;
+  }
+
+  .nav-cta {
+    background: linear-gradient(90deg, rgba(96, 165, 250, 0.2), rgba(168, 85, 247, 0.2));
+    border: 1px solid rgba(168, 85, 247, 0.35);
+    box-shadow: 0 10px 30px rgba(96, 165, 250, 0.12);
+  }
+
+  .nav-cta:hover {
+    box-shadow: 0 16px 34px rgba(168, 85, 247, 0.18);
+  }
+
+  .animated-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(96, 165, 250, 0.14), transparent 24%),
+      radial-gradient(circle at 80% 30%, rgba(168, 85, 247, 0.14), transparent 22%),
+      radial-gradient(circle at 50% 80%, rgba(34, 211, 238, 0.12), transparent 26%),
+      linear-gradient(135deg, rgba(2, 6, 23, 0.03), rgba(15, 23, 42, 0.02));
+    animation: pulse-glow 8s ease-in-out infinite;
+  }
+
+  .particles {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.28) 1px, transparent 1px);
+    background-size: 42px 42px;
+    opacity: 0.22;
+    mask-image: linear-gradient(to bottom, transparent, black 18%, black 82%, transparent);
+  }
+
+  .geometric-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 120px 120px;
+    opacity: 0.2;
+    mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
+  }
+
+  .bg-orb {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(48px);
+    opacity: 0.45;
+    animation: float 14s ease-in-out infinite;
+  }
+
+  .bg-orb-1 {
+    width: 22rem;
+    height: 22rem;
+    background: rgba(96, 165, 250, 0.14);
+    top: 8rem;
+    left: -5rem;
+  }
+
+  .bg-orb-2 {
+    width: 28rem;
+    height: 28rem;
+    background: rgba(168, 85, 247, 0.14);
+    top: 16rem;
+    right: -7rem;
+    animation-delay: 2.2s;
+  }
+
+  .bg-orb-3 {
+    width: 18rem;
+    height: 18rem;
+    background: rgba(34, 211, 238, 0.12);
+    bottom: 6rem;
+    left: 30%;
+    animation-delay: 4s;
+  }
 }

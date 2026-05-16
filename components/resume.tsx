@@ -10,11 +10,11 @@ export default function Resume() {
 
   return (
     <section id="resume" className="py-20 px-4 bg-background">
-            {/* Animated background */}
-            <div className="absolute inset-0 -z-10 opacity-20 overflow-hidden">
-              <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/30 rounded-full blur-3xl animate-pulse" />
-              <div className="absolute bottom-1/3 left-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse" style={{ animation: "pulse 4s ease-in-out infinite 2s" }} />
-            </div>
+      {/* Animated background */}
+      <div className="absolute inset-0 -z-10 opacity-20 overflow-hidden">
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/30 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/3 left-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse" style={{ animation: "pulse 4s ease-in-out infinite 2s" }} />
+      </div>
 
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-8">
@@ -31,21 +31,19 @@ export default function Resume() {
             <div className="group relative">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur" />
               <Button variant="outline" className="relative inline-flex items-center gap-2 border-border hover:bg-muted transition-all">
-              <Eye size={16} />
-              View Resume
-                          </Button>
-                        </div>
-            </Button>
+                <Eye size={16} />
+                View Resume
+              </Button>
+            </div>
           </a>
           <a href={downloadHref} download className="no-underline">
             <div className="group relative">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur" />
               <Button className="relative inline-flex items-center gap-2 bg-gradient-to-r from-primary to-accent text-white shadow-lg hover:shadow-xl hover:shadow-primary/50 transition-all font-semibold">
-              <Download size={16} />
-              Download My Resume
-                          </Button>
-                        </div>
-            </Button>
+                <Download size={16} />
+                Download My Resume
+              </Button>
+            </div>
           </a>
         </div>
       </div>

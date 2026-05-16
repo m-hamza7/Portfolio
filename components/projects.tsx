@@ -1,5 +1,34 @@
-import { ExternalLink, Github, ArrowUpRight } from "lucide-react"
+import {
+  ExternalLink,
+  Github,
+  ArrowUpRight,
+  Globe2,
+  BrainCircuit,
+  Swords,
+  Droplets,
+  Cpu,
+  LibraryBig,
+  Search,
+  Layers3,
+} from "lucide-react"
 import { Button } from "@/components/ui/button"
+
+const floatingOrbs = [
+  { className: "top-20 left-10 w-72 h-72 bg-primary/20", delay: "0s" },
+  { className: "bottom-24 right-10 w-80 h-80 bg-accent/20", delay: "1.5s" },
+  { className: "top-1/2 right-1/4 w-40 h-40 bg-fuchsia-500/20", delay: "3s" },
+]
+
+const getProjectIcon = (title: string) => {
+  if (title.includes("Web Pages")) return Globe2
+  if (title.includes("CleanAI")) return BrainCircuit
+  if (title.includes("Atomic Chess")) return Swords
+  if (title.includes("Blood Donation")) return Droplets
+  if (title.includes("miniC")) return Cpu
+  if (title.includes("Library")) return LibraryBig
+  if (title.includes("Search")) return Search
+  return Layers3
+}
 
 export default function Projects() {
   const projects = [
@@ -67,8 +96,15 @@ export default function Projects() {
     <section id="projects" className="py-20 px-4 bg-background relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 -z-10 opacity-20">
-        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-accent/30 rounded-full blur-3xl animate-pulse" style={{ animation: "pulse 4s ease-in-out infinite 2s" }} />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(124,58,237,0.08),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(6,182,212,0.08),transparent_28%)]" />
+        {floatingOrbs.map((orb, index) => (
+          <div
+            key={index}
+            className={`absolute rounded-full blur-3xl animate-pulse ${orb.className}`}
+            style={{ animation: `float ${10 + index * 2}s ease-in-out infinite ${orb.delay}` }}
+          />
+        ))}
+        <div className="absolute inset-x-0 top-1/2 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
       </div>
 
       <div className="max-w-5xl mx-auto relative z-10">
@@ -95,18 +131,30 @@ export default function Projects() {
               {/* Gradient border effect */}
               <div className={`absolute -inset-px bg-gradient-to-r ${project.gradient} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur`} />
               
-              <div className="relative p-6 md:p-8 bg-card border border-border rounded-xl backdrop-blur-sm">
+              <div className="relative p-6 md:p-8 bg-card border border-border rounded-xl backdrop-blur-sm overflow-hidden">
+                <div className={`absolute -top-20 -right-20 w-40 h-40 rounded-full bg-gradient-to-br ${project.gradient} opacity-10 blur-3xl group-hover:opacity-20 transition-opacity`} />
                 <div className="mb-4 flex items-start justify-between">
-                  <div>
+                  <div className="space-y-3">
                     {project.featured && (
                       <span className="inline-flex items-center gap-1 px-3 py-1 text-xs font-semibold rounded-full bg-gradient-to-r from-primary/20 to-accent/20 text-accent mb-3 border border-accent/30">
                         <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                         Featured
                       </span>
                     )}
-                    <h3 className="text-2xl font-bold text-foreground group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-accent group-hover:bg-clip-text transition-all">
-                      {project.title}
-                    </h3>
+                    <div className="flex items-center gap-3">
+                      <div className={`flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br ${project.gradient} text-white shadow-lg shadow-black/10`}>
+                        {(() => {
+                          const Icon = getProjectIcon(project.title)
+                          return <Icon size={20} />
+                        })()}
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold text-foreground group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-accent group-hover:bg-clip-text transition-all">
+                          {project.title}
+                        </h3>
+                        <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Selected work</p>
+                      </div>
+                    </div>
                   </div>
                   <ArrowUpRight size={24} className="text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                 </div>
