@@ -51,7 +51,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
           <div className="inline-block slide-in-down">
             <span className="inline-flex items-center gap-2 rounded-full glass px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.25em] text-muted-foreground transition-transform group hover:scale-105">
               <span className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-accent pulse-dot"></span>
-              Open to internships & entry-level roles
+              Open for opportunities
             </span>
           </div>
 
@@ -108,7 +108,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
           {/* Stats with animations */}
           <div className="pt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: "10+", label: "Projects Built", delay: 0 },
+              { value: "10+", label: "Projects Built and Tested", delay: 0 },
               { value: "2026", label: "Expected Graduation", delay: 1 },
               { value: "50+", label: "Skills Developed", delay: 2 },
               { value: "100%", label: "Commitment", delay: 3 },

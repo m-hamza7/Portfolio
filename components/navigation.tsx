@@ -27,6 +27,7 @@ export default function Navigation({ activeSection, scrollToSection }: Navigatio
     { id: "about", label: "ABOUT" },
     { id: "skills", label: "SKILLS" },
     { id: "projects", label: "PROJECTS" },
+    { id: "learning", label: "LEARNING" },
     { id: "contact", label: "CONTACT" },
     { id: "resume", label: "RESUME" },
   ]

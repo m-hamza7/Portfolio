@@ -12,6 +12,7 @@ import {
   Layers3,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Description } from "@radix-ui/react-toast"
 
 const floatingOrbs = [
   { className: "top-20 left-10 w-72 h-72 bg-primary/20", delay: "0s" },
@@ -49,6 +50,16 @@ export default function Projects() {
       github: "https://github.com/m-hamza7",
       featured: true,
       gradient: "from-green-600 to-emerald-600",
+    },
+
+
+    {
+      title: 'Playwright E2E Test Automation for Blood Donation System',
+      description: "Built a Playwright-based SQA test suite for a Flask blood donation application, covering 40 end-to-end scenarios across positive and negative flows such as login, registration, search, donor, hospital, and admin workflows, with Allure reporting and screenshot capture for structured test execution.",
+      tech: ['Playwright', 'JavaScript', 'Allure Reporting', 'E2E Testing', 'Test Automation'],
+      github: 'https://github.com/m-hamza7/Playwright-E2E-Test-Automation',
+      featured: true,
+      gradient: 'from-red-600 to-pink-600', 
     },
     {
       title: "Atomic Chess - AI-Based Game",
