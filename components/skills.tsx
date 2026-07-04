@@ -23,7 +23,7 @@ export default function Skills() {
     {
       title: "AI/ML & Data Science",
       icon: Code2,
-      skills: ["Python (NumPy, Pandas, matplotlib)", "Scikit-learn", "Data Analysis", "Machine Learning Models", "Data Visualization"],
+      skills: ["Python (NumPy, Pandas, matplotlib)", "YOLO (object detection)","Scikit-learn", "Data Analysis", "Machine Learning Models", "Data Visualization"],
       color: "from-yellow-500 to-orange-500",
     },
     {
