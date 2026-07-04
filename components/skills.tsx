@@ -21,6 +21,12 @@ export default function Skills() {
       color: "from-purple-500 to-pink-500",
     },
     {
+      title: "AI/ML & Data Science",
+      icon: Code2,
+      skills: ["Python (NumPy, Pandas)", "Scikit-learn", "Data Analysis", "Machine Learning Models", "Data Visualization"],
+      color: "from-yellow-500 to-orange-500",
+    },
+    {
       title: "Tools & Platforms",
       icon: Wrench,
       skills: ["Playwright", "Postman", "Jira", "Git/GitHub", "MS Dynamics 365"],

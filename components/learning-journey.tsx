@@ -19,7 +19,7 @@ const phases = [
     icon: Database,
     color: "from-green-500 to-emerald-500",
     topics: ["NumPy", "Pandas", "Matplotlib", "Scikit-learn", "Classification", "Regression"],
-    status: "in-progress",
+    status: "completed",
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const phases = [
     icon: Brain,
     color: "from-purple-500 to-pink-500",
     topics: ["Neural Networks", "CNNs", "RNNs & LSTMs", "Transformers", "PyTorch", "TensorFlow"],
-    status: "upcoming",
+    status: "in-progress",
   },
   {
     id: 4,

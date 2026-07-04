@@ -62,6 +62,14 @@ export default function Projects() {
       gradient: 'from-red-600 to-pink-600', 
     },
     {
+      title: "Spotify Song Popularity Prediction & Recommendation System",
+      description:
+        "Developed a machine learning model to predict song popularity based on audio features and metadata. Built a recommendation system to suggest similar songs using collaborative filtering and content-based filtering techniques.",
+      tech: ["Python", "Scikit-learn", "Pandas", "NumPy", "Machine Learning"],
+      github: "https://github.com/m-hamza7/Spotify-Song-Popularity-Prediction-Listening-Behavior-Analysis",
+
+    },
+    {
       title: "Atomic Chess - AI-Based Game",
       description:
         "Interactive web-based chess game with custom rules, move validation, and AI opponent. Built with React focusing on clean code and smooth gameplay.",
