@@ -40,7 +40,7 @@ export default function Navigation({ activeSection, scrollToSection }: Navigatio
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 blur-xl" />
           <nav className={`relative flex items-center justify-between rounded-full border border-white/10 px-6 py-4 transition-all duration-700 ${scrolled ? "glass" : "glass"}`}>
             <div className="flex items-center gap-3">
-              <div className="text-2xl font-bold gradient-text flex-shrink-0">Hamza</div>
+              <div className="text-2xl font-bold flex-shrink-0">Hamza</div>
               <div className="hidden sm:flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-500/10 px-3 py-1.5">
                 <div className="h-2 w-2 rounded-full bg-emerald-400 shadow-lg shadow-emerald-400/50" />
                 <span className="text-[10px] font-medium tracking-[0.2em] text-emerald-300 uppercase">Available</span>
