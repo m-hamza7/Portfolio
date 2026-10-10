@@ -82,7 +82,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
           {/* Description */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed slide-in-up">
             I'm a Jr. SQA Engineer at TRAFiX LLC and a Computer Science graduate from FAST NUCES. I care about building
-            responsive web applications and shipping reliable software through thoughtful testing, clear communication,
+            responsive web/Desktop applications and shipping reliable software through thoughtful testing, clear communication,
             and steady collaboration with engineering teams.
           </p>
 

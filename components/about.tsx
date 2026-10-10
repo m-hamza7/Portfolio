@@ -19,7 +19,7 @@ export default function About() {
               About <span className="gradient-accent">Me</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              I'm a Jr. SQA Engineer at TRAFiX LLC and a Computer Science graduate from FAST NUCES. I enjoy building web
+              I'm a Jr. SQA Engineer at TRAFiX LLC and a Computer Science graduate from FAST NUCES. I enjoy building
               applications and making sure they work well for users through careful testing and attention to detail.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -76,7 +76,7 @@ export default function About() {
                 </div>
                 <h3 className="text-lg font-semibold bg-gradient-to-r from-cyan-200 to-cyan-400 bg-clip-text text-transparent mb-2">Focus</h3>
                 <p className="text-sm text-muted-foreground mb-2">
-                  <strong>Software Quality & Web Engineering</strong>
+                  <strong>Software Quality Assurance Engineering</strong>
                 </p>
                 <p className="text-sm text-muted-foreground">Test design, automation-friendly QA, and full-stack projects</p>
               </div>
