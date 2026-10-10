@@ -1,4 +1,4 @@
-import { GraduationCap, Lightbulb, MapPin, Sparkles } from "lucide-react"
+import { Briefcase, GraduationCap, Lightbulb, MapPin } from "lucide-react"
 
 export default function About() {
   return (
@@ -19,59 +19,77 @@ export default function About() {
               About <span className="gradient-accent">Me</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              I'm a Computer Science student at FAST NUCES with a passion for building web applications and
-              understanding software quality. I love learning through projects and enjoy writing clean code that works
-              well for users.
+              I'm a Jr. SQA Engineer at TRAFiX LLC and a Computer Science graduate from FAST NUCES. I enjoy building web
+              applications and making sure they work well for users through careful testing and attention to detail.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              I'm particularly interested in software engineering and quality assurance—two fields that complement each
-              other. Through my projects, I'm learning how to build features thoughtfully and test them thoroughly.
+              Software engineering and quality assurance go hand in hand for me—whether I'm writing features in personal
+              projects or validating releases at work, I focus on clarity, reliability, and collaboration.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              I'm looking for internship or entry-level opportunities where I can grow my skills, contribute to real
-              projects, and learn from experienced developers.
+              I joined TRAFiX LLC in September 2026 to grow as a quality engineer and contribute to products teams can
+              ship with confidence. Explore my{" "}
+              <a href="#journey" className="text-primary hover:underline font-medium">
+                professional journey
+              </a>{" "}
+              for the full timeline.
             </p>
           </div>
 
           <div className="space-y-4">
             <div className="group relative p-6 bg-background rounded-lg backdrop-blur-sm" style={{ animation: "slideInUp 0.6s ease-out 0.1s both" }}>
               {/* Gradient border effect */}
-              <div className="absolute -inset-px bg-gradient-to-r from-blue-500 via-blue-600 to-cyan-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur" style={{ zIndex: -1 }} />
+              <div className="absolute -inset-px bg-gradient-to-r from-blue-950 via-blue-900 to-cyan-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur" style={{ zIndex: -1 }} />
               <div className="relative bg-background rounded-lg">
-                <div className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-cyan-600 text-white shadow-lg">
+                <div className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-blue-950 to-cyan-500 text-white shadow-lg">
                   <GraduationCap size={20} />
                 </div>
-                <h3 className="text-lg font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">Education</h3>
+                <h3 className="text-lg font-semibold bg-gradient-to-r from-cyan-200 to-cyan-400 bg-clip-text text-transparent mb-2">Education</h3>
                 <p className="text-sm text-muted-foreground mb-2">
                   <strong>Bachelor of Science in Computer Science</strong>
                 </p>
-                <p className="text-sm text-muted-foreground">FAST NUCES | 2022-2026</p>
+                <p className="text-sm text-muted-foreground">FAST NUCES | 2022 – 2026</p>
               </div>
             </div>
 
             <div className="group relative p-6 bg-background rounded-lg backdrop-blur-sm" style={{ animation: "slideInUp 0.6s ease-out 0.2s both" }}>
               {/* Gradient border effect */}
-              <div className="absolute -inset-px bg-gradient-to-r from-purple-500 via-pink-600 to-red-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur" style={{ zIndex: -1 }} />
+              <div className="absolute -inset-px bg-gradient-to-r from-blue-950 via-cyan-800 to-cyan-500 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur" style={{ zIndex: -1 }} />
               <div className="relative bg-background rounded-lg">
-                <div className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-pink-600 text-white shadow-lg">
+                <div className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-blue-950 to-cyan-600 text-white shadow-lg">
+                  <Briefcase size={20} />
+                </div>
+                <h3 className="text-lg font-semibold bg-gradient-to-r from-cyan-300 to-cyan-500 bg-clip-text text-transparent mb-2">Current Role</h3>
+                <p className="text-sm text-muted-foreground mb-2">
+                  <strong>Jr. SQA Engineer</strong>
+                </p>
+                <p className="text-sm text-muted-foreground">TRAFiX LLC · Started September 2026</p>
+              </div>
+            </div>
+
+            <div className="group relative p-6 bg-background rounded-lg backdrop-blur-sm" style={{ animation: "slideInUp 0.6s ease-out 0.25s both" }}>
+              {/* Gradient border effect */}
+              <div className="absolute -inset-px bg-gradient-to-r from-blue-950 to-cyan-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur" style={{ zIndex: -1 }} />
+              <div className="relative bg-background rounded-lg">
+                <div className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-blue-900 to-cyan-500 text-white shadow-lg">
                   <Lightbulb size={20} />
                 </div>
-                <h3 className="text-lg font-semibold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">Interests</h3>
+                <h3 className="text-lg font-semibold bg-gradient-to-r from-cyan-200 to-cyan-400 bg-clip-text text-transparent mb-2">Focus</h3>
                 <p className="text-sm text-muted-foreground mb-2">
-                  <strong>Software Engineering & QA</strong>
+                  <strong>Software Quality & Web Engineering</strong>
                 </p>
-                <p className="text-sm text-muted-foreground">Building and testing web applications</p>
+                <p className="text-sm text-muted-foreground">Test design, automation-friendly QA, and full-stack projects</p>
               </div>
             </div>
 
             <div className="group relative p-6 bg-background rounded-lg backdrop-blur-sm" style={{ animation: "slideInUp 0.6s ease-out 0.3s both" }}>
               {/* Gradient border effect */}
-              <div className="absolute -inset-px bg-gradient-to-r from-orange-500 via-orange-600 to-yellow-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur" style={{ zIndex: -1 }} />
+              <div className="absolute -inset-px bg-gradient-to-r from-cyan-700 to-blue-950 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur" style={{ zIndex: -1 }} />
               <div className="relative bg-background rounded-lg">
-                <div className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-orange-500 to-yellow-600 text-white shadow-lg">
+                <div className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-600 to-blue-950 text-white shadow-lg">
                   <MapPin size={20} />
                 </div>
-                <h3 className="text-lg font-semibold bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent mb-2">Location</h3>
+                <h3 className="text-lg font-semibold bg-gradient-to-r from-cyan-300 to-blue-200 bg-clip-text text-transparent mb-2">Location</h3>
                 <p className="text-sm text-muted-foreground">Karachi, Sindh, Pakistan</p>
               </div>
             </div>

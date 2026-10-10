@@ -51,7 +51,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
           <div className="inline-block slide-in-down">
             <span className="inline-flex items-center gap-2 rounded-full glass px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.25em] text-muted-foreground transition-transform group hover:scale-105">
               <span className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-accent pulse-dot"></span>
-              Open for opportunities
+              Jr. SQA Engineer · TRAFiX LLC
             </span>
           </div>
 
@@ -81,9 +81,9 @@ export default function Hero({ scrollToSection }: HeroProps) {
 
           {/* Description */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed slide-in-up">
-            I'm a Computer Science student passionate about building responsive web applications and understanding
-            software quality. I'm learning full-stack development and interested in how teams build and test reliable
-            projects.
+            I'm a Jr. SQA Engineer at TRAFiX LLC and a Computer Science graduate from FAST NUCES. I care about building
+            responsive web applications and shipping reliable software through thoughtful testing, clear communication,
+            and steady collaboration with engineering teams.
           </p>
 
           {/* CTA Buttons */}
@@ -108,10 +108,14 @@ export default function Hero({ scrollToSection }: HeroProps) {
           {/* Stats with animations */}
           <div className="pt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: "10+", label: "Projects Built and Tested", delay: 0 },
-              { value: "2026", label: "Expected Graduation", delay: 1 },
-              { value: "50+", label: "Skills Developed", delay: 2 },
-              { value: "100%", label: "Commitment", delay: 3 },
+              {
+                label: "Jr. SQA Engineer",
+                delay: 0,
+                logo: { src: "/trafix-logo.png", alt: "TRAFiX company logo" },
+              },
+              { value: "2026", label: "BS CS, FAST NUCES", delay: 1 },
+              { value: "10+", label: "Projects Built & Tested", delay: 2 },
+              { value: "Sept '26", label: "Role Started", delay: 3 },
             ].map((stat, idx) => (
               <div
                 key={idx}
@@ -120,9 +124,21 @@ export default function Hero({ scrollToSection }: HeroProps) {
                   animation: `slideInUp 0.6s ease-out ${stat.delay * 0.1}s both`,
                 }}
               >
-                <p className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  {stat.value}
-                </p>
+                {"logo" in stat && stat.logo ? (
+                  <div className="relative mx-auto h-11 w-full max-w-[160px] md:h-12">
+                    <Image
+                      src={stat.logo.src}
+                      alt={stat.logo.alt}
+                      fill
+                      className="object-contain object-center"
+                      sizes="160px"
+                    />
+                  </div>
+                ) : (
+                  <p className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    {"value" in stat ? stat.value : ""}
+                  </p>
+                )}
                 <p className="text-sm text-muted-foreground mt-2">{stat.label}</p>
               </div>
             ))}

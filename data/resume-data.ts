@@ -29,6 +29,14 @@ export type Project = {
   repo?: string | null
 }
 
+export type Education = {
+  degree: string
+  institution: string
+  period: string
+  location: string
+  details?: string
+}
+
 export type ResumeData = {
   personalInfo: {
     name: string
@@ -51,6 +59,7 @@ export type ResumeData = {
     quality: string[]
   }
   experience: WorkExperience[]
+  education: Education[]
   hardSkills: string[]
   softSkills: string[]
   languages: Language[]
@@ -61,19 +70,19 @@ export type ResumeData = {
 const resumeData: ResumeData = {
   personalInfo: {
     name: "Muhammad Hamza",
-    title: "Computer Science Student | Interested in Software Engineering & QA",
+    title: "Jr. SQA Engineer | TRAFiX LLC",
     email: "muhmd.hamza0@gmail.com",
     location: "Karachi, Sindh, Pakistan",
     linkedin: "https://www.linkedin.com/in/m-hamza7",
     github: "https://github.com/m-hamza7",
     website: "https://muhmd-hamza-portfolio.vercel.app/",
     photo: "/images/profile.png",
-    yearsOfExperience: "Pursuing degree in Computer Science at FAST NUCES",
-    teamLeadExperience: "Learning full-stack web development with focus on quality",
+    yearsOfExperience: "Jr. SQA Engineer at TRAFiX LLC (since September 2026)",
+    teamLeadExperience: "B.S. Computer Science, FAST NUCES (2026)",
   },
   summary: [
-    "Passionate about building responsive web applications with a focus on quality and user experience.",
-    "Interested in both software engineering and quality assurance—learning full-stack development, testing practices, and building reliable applications.",
+    "Jr. SQA Engineer at TRAFiX LLC, focused on delivering reliable software through thoughtful test design, execution, and clear communication with development teams.",
+    "Computer Science graduate from FAST NUCES with hands-on experience in web development, automation-friendly testing, and building quality into products from requirements through release.",
   ],
   skills: {
     languages: ["Python", "C", "C++ (OOP)", "JavaScript", "Assembly (8086)"],
@@ -91,7 +100,29 @@ const resumeData: ResumeData = {
       "Cross-Browser Testing",
     ],
   },
-  experience: [],
+  experience: [
+    {
+      title: "Jr. SQA Engineer",
+      company: "TRAFiX LLC",
+      period: "September 2026 – Present",
+      location: "Karachi, Pakistan",
+      responsibilities: [
+        "Design, execute, and maintain manual and exploratory test cases for web and product workflows.",
+        "Log, track, and verify defects while partnering with developers on fixes and regression checks.",
+        "Support release validation through structured regression testing and smoke checks before deployment.",
+        "Document test results and contribute to improving QA processes and coverage over time.",
+      ],
+    },
+  ],
+  education: [
+    {
+      degree: "Bachelor of Science in Computer Science",
+      institution: "National University of Computer and Emerging Sciences (FAST NUCES)",
+      period: "2022 – 2026",
+      location: "Karachi, Pakistan",
+      details: "Coursework and projects spanning software engineering, databases, web development, and software quality assurance.",
+    },
+  ],
   hardSkills: [
     "Python",
     "C",
@@ -152,7 +183,7 @@ const resumeData: ResumeData = {
       role: "Designer & Developer",
       period: "2025",
       description:
-        "This portfolio site showcases projects and skills. Built with Next.js to highlight my interests in full-stack development and quality-focused practices.",
+        "This portfolio site showcases projects, experience, and skills. Built with Next.js to reflect my work in software quality and full-stack development.",
       technologies: ["Next.js", "React", "Tailwind CSS", "Vercel"],
       link: "https://muhmd-hamza-portfolio.vercel.app/",
     },

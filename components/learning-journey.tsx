@@ -8,7 +8,7 @@ const phases = [
     title: "Build the Foundations",
     description: "Python fundamentals, mathematics, and problem-solving",
     icon: Code,
-    color: "from-blue-500 to-cyan-500",
+    color: "from-blue-950 to-cyan-500",
     topics: ["Python Basics", "Data Structures", "OOP", "Linear Algebra", "Probability & Statistics"],
     status: "completed",
   },
@@ -17,7 +17,7 @@ const phases = [
     title: "Data Science & Machine Learning",
     description: "Hands-on data analysis, feature engineering, and ML algorithms",
     icon: Database,
-    color: "from-green-500 to-emerald-500",
+    color: "from-cyan-600 to-blue-900",
     topics: ["NumPy", "Pandas", "Matplotlib", "Scikit-learn", "Classification", "Regression"],
     status: "completed",
   },
@@ -26,7 +26,7 @@ const phases = [
     title: "Deep Learning",
     description: "Neural networks, CNNs, RNNs, and Transformers",
     icon: Brain,
-    color: "from-purple-500 to-pink-500",
+    color: "from-blue-900 to-cyan-400",
     topics: ["Neural Networks", "CNNs", "RNNs & LSTMs", "Transformers", "PyTorch", "TensorFlow"],
     status: "in-progress",
   },
@@ -35,7 +35,7 @@ const phases = [
     title: "Generative AI & LLMs",
     description: "Large Language Models, RAG, and prompt engineering",
     icon: Zap,
-    color: "from-orange-500 to-red-500",
+    color: "from-cyan-500 to-blue-950",
     topics: ["LLMs", "Prompt Engineering", "RAG", "Fine-tuning", "Hugging Face", "LangChain"],
     status: "upcoming",
   },
@@ -44,7 +44,7 @@ const phases = [
     title: "Software Engineering Skills",
     description: "Production-ready development practices and tools",
     icon: Cpu,
-    color: "from-indigo-500 to-blue-500",
+    color: "from-blue-950 to-cyan-600",
     topics: ["Git & GitHub", "REST APIs", "Docker", "Databases", "Cloud Basics"],
     status: "upcoming",
   },
@@ -53,29 +53,29 @@ const phases = [
     title: "MLOps & Deployment",
     description: "Model deployment, monitoring, and production pipelines",
     icon: Package,
-    color: "from-teal-500 to-green-500",
+    color: "from-cyan-700 to-blue-900",
     topics: ["Model Deployment", "CI/CD", "Docker & Kubernetes", "Vector Databases", "Monitoring"],
     status: "upcoming",
   },
 ]
 
 const getStatusIcon = (status: string) => {
-  if (status === "completed") return <CheckCircle className="text-green-500" size={20} />
-  if (status === "in-progress") return <Zap className="text-yellow-500" size={20} />
+  if (status === "completed") return <CheckCircle className="text-cyan-400" size={20} />
+  if (status === "in-progress") return <Zap className="text-cyan-300" size={20} />
   return <Circle className="text-gray-400" size={20} />
 }
 
 const getStatusBadge = (status: string) => {
   if (status === "completed")
     return (
-      <span className="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold rounded-full bg-green-500/20 text-green-600 dark:text-green-400 border border-green-500/30">
+      <span className="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold rounded-full bg-cyan-500/15 text-cyan-700 dark:text-cyan-300 border border-cyan-500/30">
         <CheckCircle size={14} />
         Completed
       </span>
     )
   if (status === "in-progress")
     return (
-      <span className="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold rounded-full bg-yellow-500/20 text-yellow-600 dark:text-yellow-400 border border-yellow-500/30">
+      <span className="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold rounded-full bg-blue-950/40 text-cyan-200 border border-cyan-500/35">
         <Zap size={14} />
         In Progress
       </span>
@@ -118,7 +118,7 @@ export default function LearningJourney() {
         
         <div className="mb-12 slide-in-up" style={{ animation: "slideInUp 0.6s ease-out 0.2s both" }}>
           <div className="relative group">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur" />
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-950 via-cyan-700 to-cyan-400 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur" />
             <a
               href="https://github.com/m-hamza7/AI-Engineering-Learning-DUMP"
               target="_blank"
@@ -199,7 +199,7 @@ export default function LearningJourney() {
         {/* Data Science Repository Structure */}
         <div className="mt-16 slide-in-up" style={{ animation: "slideInUp 0.6s ease-out 0.8s both" }}>
           <div className="relative group">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur" />
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-950 via-cyan-600 to-cyan-300 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur" />
             <div className="relative p-8 bg-card border border-border rounded-xl backdrop-blur-sm">
               <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
                 <Database className="text-accent" />

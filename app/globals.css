@@ -11,9 +11,9 @@
   --card-foreground: #0f172a;
   --popover: #ffffff;
   --popover-foreground: #0f172a;
-  --primary: #7c3aed;
+  --primary: #0e7490;
   --primary-foreground: #ffffff;
-  --secondary: #06b6d4;
+  --secondary: #172554;
   --secondary-foreground: #ffffff;
   --muted: #e2e8f0;
   --muted-foreground: #64748b;
@@ -23,21 +23,21 @@
   --destructive-foreground: #ffffff;
   --border: #e2e8f0;
   --input: #f1f5f9;
-  --ring: #7c3aed;
-  --chart-1: #7c3aed;
+  --ring: #0891b2;
+  --chart-1: #172554;
   --chart-2: #06b6d4;
-  --chart-3: #ec4899;
+  --chart-3: #22d3ee;
   --chart-4: #f59e0b;
   --chart-5: #10b981;
   --radius: 1rem;
   --sidebar: #ffffff;
   --sidebar-foreground: #0f172a;
-  --sidebar-primary: #7c3aed;
+  --sidebar-primary: #0e7490;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #06b6d4;
   --sidebar-accent-foreground: #0f172a;
   --sidebar-border: #e2e8f0;
-  --sidebar-ring: #7c3aed;
+  --sidebar-ring: #0891b2;
 }
 
 .dark {
@@ -48,32 +48,32 @@
   --card-foreground: #f1f5f9;
   --popover: #1e293b;
   --popover-foreground: #f1f5f9;
-  --primary: #a855f7;
+  --primary: #22d3ee;
   --primary-foreground: #0f172a;
-  --secondary: #22d3ee;
-  --secondary-foreground: #0f172a;
+  --secondary: #1e3a8a;
+  --secondary-foreground: #f1f5f9;
   --muted: #334155;
   --muted-foreground: #cbd5e1;
-  --accent: #22d3ee;
+  --accent: #06b6d4;
   --accent-foreground: #0f172a;
   --destructive: #f87171;
   --destructive-foreground: #0f172a;
   --border: #334155;
   --input: #0f172a;
-  --ring: #a855f7;
-  --chart-1: #a855f7;
+  --ring: #22d3ee;
+  --chart-1: #1e3a8a;
   --chart-2: #22d3ee;
-  --chart-3: #ec4899;
+  --chart-3: #0891b2;
   --chart-4: #fbbf24;
   --chart-5: #34d399;
   --sidebar: #0f172a;
   --sidebar-foreground: #f1f5f9;
-  --sidebar-primary: #a855f7;
+  --sidebar-primary: #22d3ee;
   --sidebar-primary-foreground: #0f172a;
-  --sidebar-accent: #22d3ee;
+  --sidebar-accent: #06b6d4;
   --sidebar-accent-foreground: #0f172a;
   --sidebar-border: #334155;
-  --sidebar-ring: #a855f7;
+  --sidebar-ring: #22d3ee;
 }
 
 @theme inline {
@@ -131,8 +131,8 @@
 }
 
 @keyframes glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(124, 58, 237, 0.3); }
-  50% { box-shadow: 0 0 30px rgba(124, 58, 237, 0.6); }
+  0%, 100% { box-shadow: 0 0 20px rgba(6, 182, 212, 0.25); }
+  50% { box-shadow: 0 0 30px rgba(6, 182, 212, 0.45); }
 }
 
 @keyframes shimmer {
@@ -175,7 +175,7 @@
 
 @layer utilities {
   .gradient-accent {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-accent), #ec4899);
+    background: linear-gradient(135deg, #172554, var(--color-accent), #22d3ee);
     background-size: 300% 300%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -183,12 +183,12 @@
   }
 
   .gradient-bg {
-    background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(6, 182, 212, 0.1));
+    background: linear-gradient(135deg, rgba(23, 37, 84, 0.12), rgba(6, 182, 212, 0.1));
     position: relative;
   }
 
   .dark .gradient-bg {
-    background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(34, 211, 238, 0.1));
+    background: linear-gradient(135deg, rgba(23, 37, 84, 0.35), rgba(34, 211, 238, 0.08));
   }
 
   .float-animate {
@@ -223,7 +223,7 @@
   }
 
   .dark .card-hover:hover {
-    box-shadow: 0 20px 40px rgba(168, 85, 247, 0.2);
+    box-shadow: 0 20px 40px rgba(6, 182, 212, 0.15);
   }
 
   .glass-effect {
@@ -283,7 +283,7 @@
   }
 
   .gradient-text {
-    background: linear-gradient(90deg, #60a5fa, #a855f7, #22d3ee);
+    background: linear-gradient(90deg, #172554, #0891b2, #22d3ee);
     background-size: 200% 100%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -292,22 +292,22 @@
   }
 
   .nav-cta {
-    background: linear-gradient(90deg, rgba(96, 165, 250, 0.2), rgba(168, 85, 247, 0.2));
-    border: 1px solid rgba(168, 85, 247, 0.35);
-    box-shadow: 0 10px 30px rgba(96, 165, 250, 0.12);
+    background: linear-gradient(90deg, rgba(23, 37, 84, 0.45), rgba(6, 182, 212, 0.25));
+    border: 1px solid rgba(34, 211, 238, 0.35);
+    box-shadow: 0 10px 30px rgba(6, 182, 212, 0.12);
   }
 
   .nav-cta:hover {
-    box-shadow: 0 16px 34px rgba(168, 85, 247, 0.18);
+    box-shadow: 0 16px 34px rgba(6, 182, 212, 0.2);
   }
 
   .animated-bg {
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(circle at 20% 20%, rgba(96, 165, 250, 0.14), transparent 24%),
-      radial-gradient(circle at 80% 30%, rgba(168, 85, 247, 0.14), transparent 22%),
-      radial-gradient(circle at 50% 80%, rgba(34, 211, 238, 0.12), transparent 26%),
+      radial-gradient(circle at 20% 20%, rgba(23, 37, 84, 0.2), transparent 24%),
+      radial-gradient(circle at 80% 30%, rgba(8, 145, 178, 0.12), transparent 22%),
+      radial-gradient(circle at 50% 80%, rgba(34, 211, 238, 0.1), transparent 26%),
       linear-gradient(135deg, rgba(2, 6, 23, 0.03), rgba(15, 23, 42, 0.02));
     animation: pulse-glow 8s ease-in-out infinite;
   }
@@ -343,7 +343,7 @@
   .bg-orb-1 {
     width: 22rem;
     height: 22rem;
-    background: rgba(96, 165, 250, 0.14);
+    background: rgba(23, 37, 84, 0.35);
     top: 8rem;
     left: -5rem;
   }
@@ -351,7 +351,7 @@
   .bg-orb-2 {
     width: 28rem;
     height: 28rem;
-    background: rgba(168, 85, 247, 0.14);
+    background: rgba(8, 145, 178, 0.14);
     top: 16rem;
     right: -7rem;
     animation-delay: 2.2s;

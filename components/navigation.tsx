@@ -25,6 +25,7 @@ export default function Navigation({ activeSection, scrollToSection }: Navigatio
 
   const navItems = [
     { id: "about", label: "ABOUT" },
+    { id: "journey", label: "JOURNEY" },
     { id: "skills", label: "SKILLS" },
     { id: "projects", label: "PROJECTS" },
     { id: "learning", label: "LEARNING" },
@@ -34,16 +35,16 @@ export default function Navigation({ activeSection, scrollToSection }: Navigatio
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-50 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500" style={{ transformOrigin: "0%", transform: scrolled ? "scaleX(1)" : "scaleX(0)" }} />
+      <div className="fixed top-0 left-0 right-0 z-50 h-1 bg-gradient-to-r from-blue-950 via-cyan-700 to-cyan-400" style={{ transformOrigin: "0%", transform: scrolled ? "scaleX(1)" : "scaleX(0)" }} />
       <header className="fixed top-4 left-1/2 z-50 hidden w-[calc(100vw-2rem)] max-w-7xl -translate-x-1/2 md:block lg:top-8">
         <div className="relative">
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 blur-xl" />
           <nav className={`relative flex items-center justify-between rounded-full border border-white/10 px-6 py-4 transition-all duration-700 ${scrolled ? "glass" : "glass"}`}>
             <div className="flex items-center gap-3">
               <div className="text-2xl font-bold flex-shrink-0">Hamza</div>
-              <div className="hidden sm:flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-500/10 px-3 py-1.5">
-                <div className="h-2 w-2 rounded-full bg-emerald-400 shadow-lg shadow-emerald-400/50" />
-                <span className="text-[10px] font-medium tracking-[0.2em] text-emerald-300 uppercase">Available</span>
+              <div className="hidden sm:flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-500/10 px-3 py-1.5">
+                <div className="h-2 w-2 rounded-full bg-cyan-400 shadow-lg shadow-cyan-400/50" />
+                <span className="text-[10px] font-medium tracking-[0.15em] text-cyan-200 uppercase">TRAFiX LLC</span>
               </div>
             </div>
 
@@ -56,7 +57,7 @@ export default function Navigation({ activeSection, scrollToSection }: Navigatio
                     activeSection === item.id ? "text-white" : "text-gray-400"
                   } hover:text-white`}
                 >
-                  <span className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  <span className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-950/20 to-cyan-500/15 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                   <span className="relative z-10">{item.label}</span>
                 </button>
               ))}

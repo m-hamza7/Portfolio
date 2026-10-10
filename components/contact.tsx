@@ -79,8 +79,8 @@ export default function Contact({ scrollToSection }: ContactProps) {
             Let's <span className="gradient-accent"> Connect </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Whether you have a project in mind or just want to say hi, feel free to reach out. I'm always open to
-            exciting opportunities.
+            Whether you want to discuss quality engineering, collaborate on a project, or just say hi, I'd love to hear
+            from you.
           </p>
         </div>
 
@@ -98,9 +98,9 @@ export default function Contact({ scrollToSection }: ContactProps) {
               >
                                 {/* Gradient border effect on hover */}
                                 <div className={`absolute -inset-px bg-gradient-to-r ${
-                                  index === 0 ? "from-blue-500 to-cyan-600" :
-                                  index === 1 ? "from-purple-500 to-pink-600" :
-                                  "from-orange-500 to-red-600"
+                                  index === 0 ? "from-blue-950 to-cyan-500" :
+                                  index === 1 ? "from-cyan-600 to-blue-900" :
+                                  "from-blue-900 to-cyan-400"
                                 } rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur`} style={{ zIndex: -1 }} />
                 
                 <div className="flex justify-center mb-4">

@@ -20,6 +20,7 @@ export default function ResumePage() {
           <div className="text-2xl font-bold gradient-accent bg-clip-text text-transparent">Hamza</div>
           <nav className="hidden md:flex gap-6">
             <Link href="/#about" className="text-sm font-medium tracking-wide hover:text-accent">ABOUT</Link>
+            <Link href="/#journey" className="text-sm font-medium tracking-wide hover:text-accent">JOURNEY</Link>
             <Link href="/#skills" className="text-sm font-medium tracking-wide hover:text-accent">SKILLS</Link>
             <Link href="/#projects" className="text-sm font-medium tracking-wide hover:text-accent">PROJECTS</Link>
             <Link href="/#contact" className="text-sm font-medium tracking-wide hover:text-accent">CONTACT</Link>
@@ -35,7 +36,7 @@ export default function ResumePage() {
             <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
               <div>
                 <h1 className="text-4xl font-bold">Resume</h1>
-                  <p className="text-xl text-muted-foreground">My skills, interests, and projects</p>
+                  <p className="text-xl text-muted-foreground">Experience, education, skills, and projects</p>
               </div>
 
               <div>
@@ -55,6 +56,10 @@ export default function ResumePage() {
             <div className="space-y-6">
               <h2 className="text-2xl font-bold">Work Experience</h2>
 
+              {resumeData.experience.length === 0 && (
+                <p className="text-muted-foreground">Professional experience will appear here.</p>
+              )}
+
               {resumeData.experience.map((job, index) => (
                 <Card key={index} className="bg-card border border-border rounded-lg">
                   <CardContent className="p-6">
@@ -73,6 +78,27 @@ export default function ResumePage() {
                         <li key={respIndex}>{responsibility}</li>
                       ))}
                     </ul>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <div className="space-y-6">
+              <h2 className="text-2xl font-bold">Education</h2>
+              {resumeData.education.map((entry, index) => (
+                <Card key={index} className="bg-card border border-border rounded-lg">
+                  <CardContent className="p-6">
+                    <div className="flex flex-col justify-between gap-2 md:flex-row md:items-start">
+                      <div>
+                        <h3 className="text-xl font-bold">{entry.degree}</h3>
+                        <p className="text-muted-foreground">{entry.institution}</p>
+                        {entry.details && <p className="mt-3 text-muted-foreground">{entry.details}</p>}
+                      </div>
+                      <div className="text-right text-muted-foreground shrink-0">
+                        <p>{entry.period}</p>
+                        <p>{entry.location}</p>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               ))}

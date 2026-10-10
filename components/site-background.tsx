@@ -5,12 +5,12 @@ import { Code2, Layers3, Palette, Rocket, Sparkles, Star, Target, Workflow } fro
 const floatingIcons = [
   { Icon: Sparkles, className: "top-20 left-[6%] text-primary/25", size: 20, delay: "0s", duration: 11 },
   { Icon: Code2, className: "top-36 right-[8%] text-accent/25", size: 22, delay: "1.2s", duration: 13 },
-  { Icon: Rocket, className: "top-1/3 left-[18%] text-fuchsia-400/25", size: 24, delay: "2.1s", duration: 15 },
-  { Icon: Target, className: "top-[52%] right-[16%] text-emerald-400/25", size: 21, delay: "0.6s", duration: 12 },
-  { Icon: Palette, className: "bottom-28 left-[12%] text-orange-400/25", size: 22, delay: "1.8s", duration: 14 },
+  { Icon: Rocket, className: "top-1/3 left-[18%] text-cyan-400/25", size: 24, delay: "2.1s", duration: 15 },
+  { Icon: Target, className: "top-[52%] right-[16%] text-cyan-300/25", size: 21, delay: "0.6s", duration: 12 },
+  { Icon: Palette, className: "bottom-28 left-[12%] text-blue-300/25", size: 22, delay: "1.8s", duration: 14 },
   { Icon: Workflow, className: "bottom-36 right-[10%] text-cyan-300/25", size: 23, delay: "2.7s", duration: 16 },
   { Icon: Layers3, className: "top-[68%] left-[28%] text-primary/20", size: 24, delay: "3.2s", duration: 17 },
-  { Icon: Star, className: "top-[16%] right-[28%] text-yellow-300/25", size: 18, delay: "4s", duration: 10 },
+  { Icon: Star, className: "top-[16%] right-[28%] text-cyan-200/25", size: 18, delay: "4s", duration: 10 },
 ]
 
 export default function SiteBackground() {

@@ -17,7 +17,7 @@ import { Description } from "@radix-ui/react-toast"
 const floatingOrbs = [
   { className: "top-20 left-10 w-72 h-72 bg-primary/20", delay: "0s" },
   { className: "bottom-24 right-10 w-80 h-80 bg-accent/20", delay: "1.5s" },
-  { className: "top-1/2 right-1/4 w-40 h-40 bg-fuchsia-500/20", delay: "3s" },
+  { className: "top-1/2 right-1/4 w-40 h-40 bg-cyan-500/15", delay: "3s" },
 ]
 
 const getProjectIcon = (title: string) => {
@@ -39,7 +39,7 @@ export default function Projects() {
         "Built multiple responsive web pages and mini sites with focus on fast performance, clean UI, and working well across different devices and browsers.",
       tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Conversion Optimization"],
       featured: true,
-      gradient: "from-blue-600 to-cyan-600",
+      gradient: "from-blue-950 to-cyan-500",
     },
     {
       title: "CleanAI - AI-Powered Waste Classification",
@@ -49,7 +49,7 @@ export default function Projects() {
       liveLink: "https://cleanai-project.vercel.app/",
       github: "https://github.com/m-hamza7",
       featured: true,
-      gradient: "from-green-600 to-emerald-600",
+      gradient: "from-cyan-600 to-blue-900",
     },
 
 
@@ -59,7 +59,7 @@ export default function Projects() {
       tech: ['Playwright', 'JavaScript', 'Allure Reporting', 'E2E Testing', 'Test Automation'],
       github: 'https://github.com/m-hamza7/Playwright-E2E-Test-Automation',
       featured: true,
-      gradient: 'from-red-600 to-pink-600', 
+      gradient: "from-blue-900 to-cyan-500",
     },
     {
       title: "Spotify Song Popularity Prediction & Recommendation System",
@@ -75,7 +75,7 @@ export default function Projects() {
         "Interactive web-based chess game with custom rules, move validation, and AI opponent. Built with React focusing on clean code and smooth gameplay.",
       tech: ["React", "JavaScript", "AI Logic", "Game Development"],
       github: "https://github.com/m-hamza7/Atomic-Chess",
-      gradient: "from-purple-600 to-pink-600",
+      gradient: "from-cyan-500 to-blue-950",
     },
     {
         title: "Online Blood Donation System",
@@ -83,7 +83,7 @@ export default function Projects() {
           "A web app for managing blood donation records including donors, hospitals, and appointments. Built with role-based access, user authentication, and focus on reliable data management.",
         tech: ["Flask", "Python", "MySQL", "Authentication", "UI/UX"],
         github: "https://github.com/m-hamza7/Online-Blood-Donation-System",
-        gradient: "from-red-600 to-pink-600",
+        gradient: "from-blue-950 to-cyan-600",
     },
     {
         title: "miniC-Compiler",
@@ -91,7 +91,7 @@ export default function Projects() {
           "A compiler front-end for the MiniC language built with Python and Flask. The app demonstrates compiler phases with interactive visualizations and proper error handling.",
         tech: ["Python", "PLY", "Flask", "UI/UX"],
         github: "https://github.com/m-hamza7/miniC-compiler",
-        gradient: "from-orange-600 to-yellow-600",
+        gradient: "from-cyan-700 to-blue-900",
     },
     {
         title: "Library Management System",
@@ -99,7 +99,7 @@ export default function Projects() {
           "Modular library system featuring book inventory, member records, and borrowing/return workflows using OOP principles and file handling in C++.",
         tech: ["C++", "OOP", "Data Structures", "File Handling"],
         github: "#",
-        gradient: "from-indigo-600 to-blue-600",
+        gradient: "from-blue-900 to-cyan-400",
     },
     {
         title: "Regex-Based Search Engine",
@@ -107,7 +107,7 @@ export default function Projects() {
           "Lightweight text search tool using regular expressions to match patterns across documents with efficient parsing and filtering algorithms.",
         tech: ["Python", "Regex", "Text Processing", "Algorithms"],
         github: "#",
-        gradient: "from-violet-600 to-purple-600",
+        gradient: "from-cyan-600 to-blue-950",
     },
     ]
 
@@ -115,7 +115,7 @@ export default function Projects() {
     <section id="projects" className="py-20 px-4 bg-background relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 -z-10 opacity-20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(124,58,237,0.08),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(6,182,212,0.08),transparent_28%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(23,37,84,0.2),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(6,182,212,0.1),transparent_28%)]" />
         {floatingOrbs.map((orb, index) => (
           <div
             key={index}

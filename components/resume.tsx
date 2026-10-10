@@ -22,14 +22,14 @@ export default function Resume() {
             My <span className="gradient-accent">Resumé</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            View my skills, projects, and interests in software engineering and quality assurance.
+            View my experience at TRAFiX LLC, education, skills, and project work in software quality and engineering.
           </p>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a href={viewHref} className="no-underline">
             <div className="group relative">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur" />
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-950 to-cyan-500 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur" />
               <Button variant="outline" className="relative inline-flex items-center gap-2 border-border hover:bg-muted transition-all">
                 <Eye size={16} />
                 View Resume

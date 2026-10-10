@@ -9,14 +9,14 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Muhammad Hamza | CS Student | Software Engineering & QA",
+  title: "Muhammad Hamza | Jr. SQA Engineer | TRAFiX LLC",
   description:
-    "Portfolio of a Computer Science student interested in software engineering and quality assurance. Projects in web development, React, Python, and testing.",
+    "Portfolio of Muhammad Hamza, Jr. SQA Engineer at TRAFiX LLC. Computer Science graduate from FAST NUCES — projects in web development, testing, React, and Python.",
   generator: "v0.app",
   openGraph: {
-    title: "Muhammad Hamza | CS Student | Software Engineering & QA",
+    title: "Muhammad Hamza | Jr. SQA Engineer | TRAFiX LLC",
     description:
-      "Portfolio of a Computer Science student interested in software engineering and quality assurance.",
+      "Jr. SQA Engineer at TRAFiX LLC. Software quality, web development, and project work from FAST NUCES.",
     type: "website",
   },
   icons: {

@@ -6,31 +6,31 @@ export default function Skills() {
       title: "Software Engineering",
       icon: Code2,
       skills: ["HTML5/CSS3", "JavaScript (ES6+)", "React.js", "Responsive Design", "REST APIs"],
-      color: "from-blue-500 to-cyan-500",
+      color: "from-blue-950 to-cyan-500",
     },
     {
       title: "Quality Assurance",
       icon: ShieldCheck,
       skills: ["Manual Testing", "Regression Testing", "Bug Reporting", "Test Case Design", "Cross-Browser Checks"],
-      color: "from-green-500 to-emerald-500",
+      color: "from-cyan-600 to-blue-900",
     },
     {
       title: "Backend & Databases",
       icon: Database,
       skills: ["Python (Flask)", "RESTful APIs", "MySQL/SQL", "CRUD Development", "Authentication"],
-      color: "from-purple-500 to-pink-500",
+      color: "from-blue-900 to-cyan-400",
     },
     {
       title: "AI/ML & Data Science",
       icon: Code2,
       skills: ["Python (NumPy, Pandas, matplotlib)", "YOLO (object detection)","Scikit-learn", "Data Analysis", "Machine Learning Models", "Data Visualization"],
-      color: "from-yellow-500 to-orange-500",
+      color: "from-cyan-500 to-blue-950",
     },
     {
       title: "Tools & Platforms",
       icon: Wrench,
       skills: ["Playwright", "Postman", "Jira", "Git/GitHub", "MS Dynamics 365"],
-      color: "from-orange-500 to-red-500",
+      color: "from-blue-950 to-cyan-600",
     },
   ]
 
@@ -95,7 +95,7 @@ export default function Skills() {
 
         {/* Programming Languages Section */}
         <div className="relative slide-in-up group" style={{ animation: "slideInUp 0.6s ease-out 0.4s both" }}>
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur" />
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-950 via-cyan-700 to-cyan-400 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur" />
           <div className="relative p-8 bg-card border border-border rounded-xl backdrop-blur-sm">
             <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
               <span className="w-3 h-3 rounded-full bg-gradient-to-r from-primary to-accent"></span>

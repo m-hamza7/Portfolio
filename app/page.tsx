@@ -8,6 +8,7 @@ import About from "@/components/about"
 import Skills from "@/components/skills"
 import Projects from "@/components/projects"
 import LearningJourney from "@/components/learning-journey"
+import ProfessionalJourney from "@/components/professional-journey"
 import Resume from "@/components/resume"
 import Contact from "@/components/contact"
 
@@ -31,6 +32,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero scrollToSection={scrollToSection} />
         <About />
+        <ProfessionalJourney />
         <Skills />
         <Projects />
         <LearningJourney />
@@ -41,7 +43,7 @@ export default function Home() {
       <footer className="border-t border-border bg-card py-8 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-muted-foreground text-sm">© 2025 Muhammad Hamza. All rights reserved.</p>
+            <p className="text-muted-foreground text-sm">© 2026 Muhammad Hamza. All rights reserved.</p>
             <div className="flex gap-4">
               <a
                 href="https://github.com/m-hamza7"
